@@ -27,4 +27,7 @@ bool linked_list_destroy(node **me);
 
 bool linked_list_is_empty(node *me);
 
+
+
+
 #endif
