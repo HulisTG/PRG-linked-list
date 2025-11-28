@@ -21,6 +21,7 @@ int main() {
 
     linked_list_destroy(&head);
 
+
     return 0;
 
 }
