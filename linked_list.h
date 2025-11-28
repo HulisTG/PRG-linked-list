@@ -23,4 +23,6 @@ bool linked_list_remove(node **me);
 
 node *linked_list_search(node *me, DATA_TYPE data);
 
+bool linked_list_destroy(node **me);
+
 #endif

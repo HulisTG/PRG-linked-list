@@ -73,3 +73,19 @@ node *linked_list_search(node *me, DATA_TYPE data){
 
     return NULL;
 }
+
+bool linked_list_destroy(node **me){
+
+    if(*me == NULL) return false;
+
+    node *current = *me;
+
+    while (current != NULL){
+
+        node * next_mode = current->next;
+        free(current);
+        current = next_mode;
+    }
+    
+    return true;
+}
