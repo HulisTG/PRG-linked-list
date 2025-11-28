@@ -89,3 +89,8 @@ bool linked_list_destroy(node **me){
     
     return true;
 }
+
+bool linked_list_is_empty(node *me){
+
+    return me == NULL;
+}
