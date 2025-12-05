@@ -22,5 +22,5 @@ int main() {
     linked_list_destroy(&head);
 
     return 0;
-
+//gcc -Werror -Wall -Wextra -pedantic -fsanitize=address main.c linked_list.c -o main.o
 }

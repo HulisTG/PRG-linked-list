@@ -86,6 +86,13 @@ bool linked_list_destroy(node **me){
         free(current);
         current = next_mode;
     }
+    *me = NULL;
     
     return true;
+}
+
+
+bool linked_list_is_empty(node *me){
+
+    return me == NULL;
 }
