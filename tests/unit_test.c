@@ -85,11 +85,28 @@ void test_function_remove(void){
 
 }
 
+
+void test_function_size(void){
+
+    size_t size = linked_list_size(test_head);
+    TEST_ASSERT_EQUAL_size_t(0, size);
+
+    bool success = linked_list_add(&test_head, 7); 
+    TEST_ASSERT_TRUE(success);
+
+    size = linked_list_size(test_head);
+    TEST_ASSERT_EQUAL_size_t(1, size);
+
+
+
+}
+
 // not needed when using generate_test_runner.rb
 int main(void) {
     UNITY_BEGIN();
     RUN_TEST(test_function_destroy);
     RUN_TEST(test_function_add);
     RUN_TEST(test_function_remove);
+    RUN_TEST(test_function_size);
     return UNITY_END();
 }
