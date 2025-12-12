@@ -101,6 +101,24 @@ void test_function_size(void){
 
 }
 
+void test_function_empty(void){
+
+    linked_list_is_empty(test_head);
+    
+
+}
+
+void test_function_print(void){
+
+    
+    linked_list_print(&test_head);
+    TEST_IGNORE();
+}
+
+
+
+
+
 // not needed when using generate_test_runner.rb
 int main(void) {
     UNITY_BEGIN();
@@ -108,5 +126,9 @@ int main(void) {
     RUN_TEST(test_function_add);
     RUN_TEST(test_function_remove);
     RUN_TEST(test_function_size);
+    RUN_TEST(test_function_empty);
+    RUN_TEST(test_function_print);
     return UNITY_END();
 }
+
+

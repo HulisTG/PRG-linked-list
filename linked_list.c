@@ -4,8 +4,7 @@ bool linked_list_add(node **me, DATA_TYPE data) {
 
     node *new_me = (node *)malloc(sizeof(node));
 
-    if (new_me == NULL)
-        return false;
+    if (new_me == NULL) return false;
 
     new_me->data = data;
     new_me->next = *me;
@@ -18,8 +17,7 @@ bool linked_list_add(node **me, DATA_TYPE data) {
 
 void linked_list_print(node **me) {
 
-    if (me == NULL)
-        return;
+    if (me == NULL) return;
 
     node *current = *me;
     
@@ -27,8 +25,7 @@ void linked_list_print(node **me) {
 
         printf("%d", current->data);
 
-        if (current->next != NULL)
-            printf(" -> ");
+        if (current->next != NULL) printf(" -> ");
 
         current = current->next;
 
@@ -92,7 +89,7 @@ bool linked_list_destroy(node **me){
 }
 
 
-bool linked_list_is_empty(node *me){
+bool linked_list_is_empty(const node *me){
 
     return me == NULL;
 }
