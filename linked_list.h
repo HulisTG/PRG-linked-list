@@ -1,3 +1,8 @@
+/**
+ * @file LINKED_LIST_H
+ * @brief Knihovna pro jednofuchou implementaci spojovacího seznamu.
+*/
+
 #ifndef LINKED_LIST_H
 #define LINKED_LIST_H
 
@@ -6,8 +11,16 @@
 #include <stdio.h>
 #include <assert.h>
 
-#define DATA_TYPE int
+/**
+ * @def DATA_TYPE
+ * @brief Definuje datový typ pro data ve spojovacím seznamu.
+*/
+#define DATA_TYPE int 
 
+
+/**
+ * @brief Struktura reprezentující prvek ve spojovacím seznamu..
+*/
 typedef struct node {
 
     DATA_TYPE data;
@@ -15,6 +28,13 @@ typedef struct node {
 
 } node;
 
+/**
+ * @brief Funkce pro přidání prvku do spojového seznamu.
+ * * Nový prvek se stane začátkem (head).
+ * @param me Ukazatel na ukazatel na začátek spojového seznamu.
+ * @param data Data typu DATA_TYPE která mají uložena.
+ * @return true - pokud se povedlo vložit prvek do seznamu, jinak false.
+*/
 bool linked_list_add(node **me, DATA_TYPE data);
 
 void linked_list_print(node **me);
